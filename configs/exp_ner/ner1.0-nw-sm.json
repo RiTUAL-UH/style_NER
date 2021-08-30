@@ -1,0 +1,54 @@
+{
+    "experiment":{
+        "id": "ner1.0-nw-sm",
+        "seed": 42,
+        "do_training": true
+    },
+
+    "data": {
+        "directory": "data/ner",
+        "colnames": {
+            "tokens": 0,
+            "labels": 1
+        },
+        "partitions": {
+            "train": "nw/train.txt",
+            "dev": "sm/dev.txt",
+            "test": [
+                "sm/test.txt"
+            ]
+        },
+        "label_scheme": ["B-PERSON", "I-PERSON", "B-NORP", "I-NORP", "B-FAC", "I-FAC", "B-ORG", "I-ORG", "B-GPE", "I-GPE", 
+            "B-LOC", "I-LOC", "B-PRODUCT", "I-PRODUCT", "B-EVENT", "I-EVENT", "B-WORK_OF_ART", "I-WORK_OF_ART", "B-LAW", "I-LAW", 
+            "B-LANGUAGE", "I-LANGUAGE", "B-DATE", "I-DATE", "B-TIME", "I-TIME", "B-PERCENT", "I-PERCENT","B-MONEY", "I-MONEY", "B-QUANTITY", "I-QUANTITY", 
+            "B-ORDINAL", "I-ORDINAL", "B-CARDINAL", "I-CARDINAL", "O"]
+    },
+
+    "preproc": {
+        "dataset_class": "ner",
+        "do_lowercase": false,
+        "new_tokens": []
+    },
+
+    "model": {
+        "pretrained": "bert-base-cased",
+        "pretrained_frozen": false,
+        "name": "ner"
+    },
+
+    "optim": {
+        "learning_rate": 5e-5,
+        "num_train_epochs": 20,
+        "max_steps": -1,
+        "per_gpu_train_batch_size": 32,
+        "per_gpu_eval_batch_size": 32,
+        "gradient_accumulation_steps": 1,
+        "weight_decay": 0.01,
+        "beta_1": 0.9,
+        "beta_2": 0.999,
+        "adam_epsilon": 1e-8,
+        "max_grad_norm": 1.0,
+        "warmup_steps": 0
+    }
+}
+

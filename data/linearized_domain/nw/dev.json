@@ -1,0 +1,5 @@
+{"tokens": ["B-PERCENT", "About", "I-PERCENT", "12", "I-PERCENT", "%", "have", "retired", "from", "a", "full", "-", "time", "job", ",", "while", "B-PERCENT", "54", "I-PERCENT", "%", "were", "asked", "to", "stay", "on", "full", "time", "."]}
+{"tokens": ["All", "eyes", "were", "on", "B-GPE", "Tokyo", "at", "the", "opening", "because", "it", "was", "the", "B-ORDINAL", "first", "major", "market", "to", "trade", "since", "B-DATE", "Friday", "'s", "B-CARDINAL", "190.58", "-", "point", "plunge", "on", "Wall", "Street", "."]}
+{"tokens": ["That", "is", "just", "a", "tad", "below", "the", "average", "of", "the", "past", "B-DATE", "40", "I-DATE", "years", "or", "so", ",", "he", "says", "."]}
+{"tokens": ["The", "limit", "lapses", "under", "current", "exchange", "rules", "if", "contracts", "trade", "above", "the", "limit", "price", "during", "the", "opening", "B-TIME", "10", "I-TIME", "minutes", "of", "trading", "."]}
+{"tokens": ["Stocks", ":", "Volume", "B-CARDINAL", "251,170,000", "shares", "."]}

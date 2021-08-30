@@ -1,0 +1,82 @@
+{
+    "experiment_id": "cdar1.0-nw-sm",
+    "experiment_type": "domain",
+    "description": "input:word | encoder:lstm | decoder:lstm | discr: mlp | output:embedding",
+    "datasets": {
+        "source":{
+            "train": "linearized_domain/nw/train.json",
+            "dev": "linearized_domain/nw/dev.json",
+            "test": "linearized_domain/nw/test.json"
+        },
+        "target":{
+            "train": "linearized_domain/sm/train.json",
+            "dev": "linearized_domain/sm/dev.json",
+            "test": "linearized_domain/sm/test.json"
+        }
+    },
+    "model": {
+        "name": "CrossDomainARModel",
+        "embedder": {
+            "name": "token_embedder",
+            "embedding_dim": 512,
+            "src_vocab_size": 10000,
+            "tgt_vocab_size": 10000,
+            "noise":{
+                "shuffle_param": 0,
+                "dropout_param": 0.1,
+                "masking_param": 0
+            }
+        },
+        "encoder": {
+            "name": "lstm",
+            "hidden_dim": 1024,
+            "latent_dim": 128,
+            "bidirectional": true,
+            "num_layers": 1,
+            "dropout": 0.5
+        },
+        "decoder": {
+            "name": "attention",
+            "hidden_dim": 1024,
+            "latent_dim": 128,
+            "bidirectional": false,
+            "num_layers": 1,
+            "dropout": 0.5
+        },
+        "discriminator": {
+            "name": "lstm",
+            "input_dim": 1024,
+            "hidden_dim": 300,
+            "num_layers": 1,
+            "bidirectional": true,
+            "smooth_labels": null,
+            "dropout": 0.5
+        },
+        "lambda_coef":{
+            "lambda_auto": 1.0,
+            "lambda_adv": 10.0,
+            "lambda_cross": 1.0
+        }
+    },
+    "training": {
+        "epochs": 50,
+        "per_gpu_train_batch_size": 8,
+        "optimizer": {
+            "generator": {
+                "name": "adam",
+                "lr": 5e-4,
+                "beta_1": 0.5,
+                "beta_2": 0.999
+            },
+            "discriminator": {
+                "name": "rmsprop",
+                "lr": 5e-4
+            }
+        },
+        "l2": 0.0,
+        "clip_grad": 5.0
+    },
+    "evaluation": {
+        "per_gpu_eval_batch_size": 4
+    }
+}
