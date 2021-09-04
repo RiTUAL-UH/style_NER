@@ -48,7 +48,7 @@ CUDA_VISIBLE_DEVICES=[gpu_id] python src/exp_domain/main.py --config configs/exp
 
 The code saves a model checkpoint after every epoch if the model improves (either lower loss or higher metric). You will notice that a directory is created using the experiment id (e.g. style_NER/checkpoints/cdar1.0-nw-sm/). You can resume training by running the same command.
 
-<u>Two phases training</u>: our training algorithm includes two phases: 1) in the first phase, we train the model with only denoising reconstruction and domain classification, and 2) in the second phase, we train the model together with denoising reconstruction, detransforming reconstruction, and the domain classification. To do this, you can simply set `lambda_cross` as 0 for the first phase and 1 for the second phase in the config file.
+<ins>Two phases training</ins>: our training algorithm includes two phases: 1) in the first phase, we train the model with only denoising reconstruction and domain classification, and 2) in the second phase, we train the model together with denoising reconstruction, detransforming reconstruction, and the domain classification. To do this, you can simply set `lambda_cross` as 0 for the first phase and 1 for the second phase in the config file.
 
 ```json
     ...
