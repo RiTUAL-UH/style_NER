@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 
 ## Data
-Please download the data with the following links: [OntoNotes-5.0-NER-BIO](https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO) and [Temporal Twitter Corpus](https://github.com/shrutirij/temporal-twitter-corpus). We provide two toy datasets under the `data/linearized_domain` dictory for cross-domain mapping experiments and `data/ner` directory for NER experiments. After downloading the data with the links above, you may need to preprocess it so that it can have the same format as toy datasets and put them under the corresponding directory.
+Please download the data with the following links: [OntoNotes-5.0-NER-BIO](https://github.com/yuchenlin/OntoNotes-5.0-NER-BIO) and [Temporal Twitter Corpus](https://github.com/shrutirij/temporal-twitter-corpus). We provide two toy datasets under the `data/linearized_domain` directory for cross-domain mapping experiments and `data/ner` directory for NER experiments. After downloading the data with the links above, you may need to preprocess it so that it can have the same format as toy datasets and put them under the corresponding directory.
 
 ##### Data pre-processing
 For data pre-processing, we provide some functions under the `src/commons/preproc_domain.py` and `src/commons/preproc_ner.py` directory. You can use them to convert the data to the json format for cross-domain mapping experiments.
@@ -80,7 +80,16 @@ CUDA_VISIBLE_DEVICES=[gpu_id] python src/exp_ner/main.py --config configs/exp_ne
 
 
 ## Citation
-(Comming soon...)
+```
+@misc{chen2021data,
+      title={Data Augmentation for Cross-Domain Named Entity Recognition}, 
+      author={Shuguang Chen and Gustavo Aguilar and Leonardo Neves and Thamar Solorio},
+      year={2021},
+      eprint={2109.01758},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
 
 ## Contact
 Feel free to get in touch via email to schen52@uh.edu.
