@@ -81,13 +81,20 @@ CUDA_VISIBLE_DEVICES=[gpu_id] python src/exp_ner/main.py --config configs/exp_ne
 
 ## Citation
 ```
-@misc{chen2021data,
-      title={Data Augmentation for Cross-Domain Named Entity Recognition}, 
-      author={Shuguang Chen and Gustavo Aguilar and Leonardo Neves and Thamar Solorio},
-      year={2021},
-      eprint={2109.01758},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{chen-etal-2021-data,
+    title = "Data Augmentation for Cross-Domain Named Entity Recognition",
+    author = "Chen, Shuguang  and
+      Aguilar, Gustavo  and
+      Neves, Leonardo  and
+      Solorio, Thamar",
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2021",
+    address = "Online and Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-main.434",
+    pages = "5346--5356",
+    abstract = "Current work in named entity recognition (NER) shows that data augmentation techniques can produce more robust models. However, most existing techniques focus on augmenting in-domain data in low-resource scenarios where annotated data is quite limited. In this work, we take this research direction to the opposite and study cross-domain data augmentation for the NER task. We investigate the possibility of leveraging data from high-resource domains by projecting it into the low-resource domains. Specifically, we propose a novel neural architecture to transform the data representation from a high-resource to a low-resource domain by learning the patterns (e.g. style, noise, abbreviations, etc.) in the text that differentiate them and a shared feature space where both domains are aligned. We experiment with diverse datasets and show that transforming the data to the low-resource domain representation achieves significant improvements over only using data from high-resource domains.",
 }
 ```
 
