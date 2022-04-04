@@ -3,7 +3,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-This repository contains the implementations of the system described in the paper ["Data Augmentation for Cross-Domain Named Entity Recognition"]() at [EMNLP 2021](https://2021.emnlp.org) conference.
+This repository contains the implementations of the system described in the paper ["Data Augmentation for Cross-Domain Named Entity Recognition"](https://aclanthology.org/2021.emnlp-main.434) at [EMNLP 2021](https://2021.emnlp.org) conference.
 
 <div><img src="images/model_architecture.png" width="100%"/></div>
 
